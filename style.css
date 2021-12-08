@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+.canvas1{
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: black;
+}
+
+#tree-generator{
+    cursor: pointer;
+    outline: black;
+    border: black;
+    position: absolute;
+    left:50%;
+    bottom: 7%;
+    z-index: 10;
+    transform: translate(-50%,60%);
+    border-radius: 60px;
+    padding: 20px 20px;
+    background: white;
+    color:brown;
+    overflow:hidden;
+    width: 300px;
+    font-size: 20px;;
+}
