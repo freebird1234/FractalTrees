@@ -12,8 +12,8 @@ function drawTree(startX ,startY,length,branchWidth,angle,color1 ,color2){
     ctx.save();
     ctx.strokeStyle=color1;
     ctx.fillStyle=color2;
-    ctx.shadowBlur=8;
-    ctx.shadowColor='blue'
+    ctx.shadowBlur=12;
+    ctx.shadowColor='black'
     ctx.lineWidth=branchWidth;
     ctx.translate(startX,startY);
     ctx.rotate(angle*Math.PI/180);
@@ -21,7 +21,7 @@ function drawTree(startX ,startY,length,branchWidth,angle,color1 ,color2){
     ctx.lineTo(0,-length);
     ctx.stroke();
 
-    if(length<15){
+    if(length<16){
         ctx.beginPath();
         ctx.arc(0,-length,15,0,Math.PI/2);
         ctx.fill();
@@ -41,12 +41,12 @@ function generateRandomTree(){
 
  let startX=canvas.width/2;
  let startY=canvas.height-100;
- let length=200 + Math.random()*15-25;
+ let length=220 + Math.random()*15-15;
  let branchWidth=Math.random()*10+4;
  let angle=0;
  let color1= 'rgb(' + Math.random()*255+20 + ',' +Math.random()*255+20+','+Math.random()*255+20;
  let color2= 'rgb(' + Math.random()*255+20 + ',' +Math.random()*255+20+','+Math.random()*255+20;
- 
+ button.style.background=color1;
  drawTree(startX,startY,length,branchWidth,angle,color1,color2);
 }
 
